@@ -26,7 +26,7 @@
 Navigate to the project folder and open `index.html` in your browser.
 
 **📢 Connect with Me**
-*💼 Portfolio:* skillseeker.me (Replace with your domain if available)
-*📧 Email:* your-email@example.com
-*🐦 Twitter:* @yourusername (Replace with your handle)
-*🔗 LinkedIn:* linkedin.com/in/yourprofile
+💼 [Portfolio: skillseeker.me]((https://whyonlythakur.github.io/Portfolio/)
+📧 [Mail](whyonlythakur@hotmail.com)
+🅾 [Instagram](https://www.instagram.com/whyonlybunny/)
+🔗 [LinkedIn](https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile)
