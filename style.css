@@ -1,0 +1,294 @@
+/* Change link color on hover */
+a {
+    color: #007bff;  /* Blue color */
+    text-decoration: none; /* Removes underline */
+}
+
+a:hover {
+    color: #0ffeff; /* Orange when hovered */
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+/* Dark Mode Switch Container */
+.theme-switch {
+    position: relative;
+    width: 60px;
+    height: 30px;
+}
+
+/* Hide Default Checkbox */
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Switch Background */
+.switch {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 30px; /* Cylindrical Shape */
+    transition: 0.4s;
+}
+
+/* The Circular Knob */
+.switch::before {
+    content: "☀️"; /* Sun Emoji (Light Mode) */
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+    font-size: 16px;
+    text-align: center;
+    line-height: 24px;
+}
+
+/* When Dark Mode is Activated */
+.theme-switch input:checked + .switch {
+    background-color: #007BFF; /* Blue (Active) */
+}
+
+/* Move the Knob (Dark Mode) */
+.theme-switch input:checked + .switch::before {
+    transform: translateX(30px);
+    content: "🌙"; /* Moon Emoji (Dark Mode) */
+}
+
+
+
+
+/* ============================ */
+/* Background Images */
+/* ============================ */
+
+/* Home Page */
+
+body.home {
+    background: url('../Portfolio/media/home.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* About Page */
+body.about {
+    background: url('../Portfolio/media/about.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Projects Page */
+body.projects {
+    background: url('../Portfolio/media/projects.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Skills Page */
+body.skills {
+    background: url('../Portfolio/media/skills.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Travel Page */
+body.travel {
+    background: url('../Portfolio/media/travel.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Contact Page */
+body.contact {
+    background: url('../Portfolio/media/contact.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================ */
+/* Light Mode - Default Styles */
+/* ============================ */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    color: #333; /* Default text color */
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 48px; /* Increase font size */
+    font-weight: bold; /* Make it bold */
+    color: #007BFF; /* Attractive blue color */
+    text-transform: uppercase; /* Uppercase letters */
+    text-shadow: 2px 4px 6px rgba(255, 255, 255, 0.2); /* Add a slight shadow */
+    letter-spacing: 2px; /* Spacing between letters */
+    font-family: 'Poppins', sans-serif; /* Stylish font */
+}
+
+/* Fix Headings */
+h2, h3 {
+    color: #333;
+}
+
+/* Fix Paragraph Text */
+p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Fix Project Section */
+.project {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fafafa;
+}
+
+/* Light Mode - Buttons */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #007BFF; /* Blue */
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Button Hover */
+.btn:hover {
+    background: #0056b3;
+}
+
+/* Light Mode Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ============================ */
+        /* DARK MODE 
+/* ============================ */
+.dark-mode {
+    background-color: #121212 !important;  /* Dark Background */
+    color: #ffffff !important;  /* Light Text */
+}
+
+/* Dark Mode - Change Container to Grey */
+.dark-mode .container {
+    background: #2c2c2c !important; /* Dark Grey */
+    color: #ffffff !important;
+    border: 1px solid #444 !important;
+}
+
+/* Dark Mode - Headings */
+.dark-mode h1 {
+    color: #ffcc00 !important; /* Bright yellow in dark mode */
+    text-shadow: 2px 4px 6px rgba(255, 204, 0, 0.5); /* More glow effect */
+}
+.dark-mode h2, 
+.dark-mode h3 {
+    color: #ffcc00 !important;  /* Yellow Headings */
+}
+
+/* Dark Mode - Paragraphs */
+.dark-mode p {
+    color: #cccccc !important;  /* Light Gray */
+}
+
+/* Dark Mode - Project Section */
+.dark-mode .project {
+    background: #2c2c2c !important; /* Dark Grey */
+    border-color: #444 !important;
+    color: white !important;
+}
+
+/* Dark Mode - Buttons */
+.dark-mode .btn {
+    background: #ffcc00 !important; /* Yellow Button */
+    color: black !important;
+    border: 1px solid #ffcc00;
+}
+
+/* Button Hover Effect */
+.dark-mode .btn:hover {
+    background: #ffaa00 !important;
+    color: black !important;
+}
+
+/* Dark Mode - Footer (Grey) */
+.dark-mode footer {
+    background: #2c2c2c !important; /* Dark Grey */
+    color: #ffcc00 !important; /* Yellow */
+    border-top: 2px solid #ffcc00;
+}
+
+/* Dark Mode - Footer Links */
+.dark-mode footer a {
+    color: #ffcc00 !important;
+    text-decoration: none;
+}
+
+.dark-mode footer a:hover {
+    color: #ffaa00 !important;
+}

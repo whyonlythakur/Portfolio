@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Gallery | SkillSeeker.me</title>
+    <link rel="stylesheet" href="../../../style.css">
+    <script src="../../../script.js" defer></script>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 36px;
+            color: #ffcc00;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #bbbbbb;
+        }
+
+        /* Video Gallery Grid */
+        .video-gallery {
+            max-width: 90%;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .video-gallery video {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 3px solid #ffcc00;
+        }
+
+        .video-gallery video:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.8);
+        }
+
+        /* Lightbox (Modal Video Player) */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .lightbox video {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 8px;
+            outline: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 40px;
+            color: #ffcc00;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .close:hover {
+            transform: scale(1.2);
+        }
+
+        /* Fade-In Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Travel Videos</h1>
+    <p>Watch the moments I've captured during my travels.</p>
+
+    <div class="video-gallery">
+        <video src="../ayodhya/ayodhya-media/saryu.mp4" controls onclick="openLightbox(this.src)"></video>
+        <video src="../ayodhya/ayodhya-media/saryu2.mp4" controls onclick="openLightbox(this.src)"></video>
+        <video src="../ayodhya/ayodhya-media/hanumangarhi.mp4" controls onclick="openLightbox(this.src)"></video>
+        <video src="../ayodhya/ayodhya-media/hanumangarhi1.mp4" controls onclick="openLightbox(this.src)"></video>
+        <video src="../ayodhya/ayodhya-media/rammandir.mp4" controls onclick="openLightbox(this.src)"></video>
+        <video src="../ayodhya/ayodhya-media/rammandirvideo1.mp4" controls onclick="openLightbox(this.src)"></video>
+        <video src="../ayodhya/ayodhya-media/rammandirvideo2.mp4" controls onclick="openLightbox(this.src)"></video>
+        <video src="../ayodhya/ayodhya-media/rammandirvideo2.mp4" controls onclick="openLightbox(this.src)"></video>
+
+
+    </div>
+    </div>
+    </div>
+    </div>
+    <a href="../ayodhya/ayodhya.html" class="btn" style="background: #555;">Go back </a>
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <video id="lightboxVideo" controls autoplay></video>
+    </div>
+
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightbox').style.display = 'flex';
+            document.getElementById('lightboxVideo').src = src;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+            document.getElementById('lightboxVideo').pause();
+        }
+    </script>
+
+</body>
+</html>

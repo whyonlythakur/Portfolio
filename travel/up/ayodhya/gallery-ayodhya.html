@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Gallery | SkillSeeker.me</title><h1>
+    <link rel="stylesheet" href=".././../../style.css">
+    <script src=".././../..//script.js" defer></script>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 36px;
+            color: #ffcc00;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #bbbbbb;
+        }
+
+        /* Gallery Grid */
+        .gallery-container {
+            max-width: 90%;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .gallery-container img {
+    width: 100%;  /* Makes all images take full width of their grid */
+    height: 200px;  /* Sets a fixed height */
+    object-fit: cover;  /* Ensures images maintain aspect ratio and fill the area */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 3px solid #ffcc00;
+}
+
+        .gallery-container img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.8);
+        }
+
+        /* Lightbox (Full-Screen Image) */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .lightbox img {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 8px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 40px;
+            color: #ffcc00;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .close:hover {
+            transform: scale(1.2);
+        }
+
+        /* Fade-In Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Travel Gallery</h1>
+    <p>Watch the moments I've captured during my travels.</p>
+
+    <div class="gallery-container">
+        <img src="../ayodhya/ayodhya-media/rammandir.jpeg" alt="Ram Mandir" onclick="openLightbox(this.src)">
+        <img src="../ayodhya/ayodhya-media/shriram.jpeg" alt="Shri Ram" onclick="openLightbox(this.src)">
+        <img src="../ayodhya/ayodhya-media/rammandir1.jpeg" alt="Ram Mandir Night View" onclick="openLightbox(this.src)">
+        <img src="../ayodhya/ayodhya-media/rammandir2.jpeg" alt="Ram Mandir Inside" onclick="openLightbox(this.src)">
+    </div>
+    <a href="../ayodhya/ayodhya.html" class="btn" style="background: #555;">Go back </a>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightboxImg">
+    </div>
+
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightbox').style.display = 'flex';
+            document.getElementById('lightboxImg').src = src;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
