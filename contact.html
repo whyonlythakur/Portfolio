@@ -1,107 +1,32 @@
-<!--Menu Bar At Top-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | The Skill Seeker</title>
+    <title>Contact | The Skill Seeker</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
- <body>
+<body>
     <header>
         <h1><a href="index.html">The Skill Seeker</a></h1>
- <style>
-            body {
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 0;
-                background-color: #f4f4f4;
-                text-align: center;
-                position: relative;
-            }
-            .container {
-                 max-width: 1000px; /* Increased width from 800px to 1000px */
-                 margin: 50px auto;
-                 padding: 25px; /* Slightly more padding */
-                 background: white;
-                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                 border-radius: 10px;
-}
-            h1 {
-                color: #333;
-            }
-            .menu-button {
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                background: #007BFF;
-                color: white;
-                border: none;
-                padding: 10px;
-                border-radius: 50%;
-                font-size: 18px;
-                cursor: pointer;
-            }
-            .dropdown-menu {
-                display: none;
-                position: absolute;
-                top: 60px; /* Increased distance from the button */
-                right: 10px; /* Adjusted position */
-                background: white;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                border-radius: 8px; /* More rounded edges */
-                padding: 15px 20px; /* More padding for spacing */
-                width: 250px; /* Increased width */
-            }            
-            .dropdown-menu a {
-                display: block;
-                padding: 12px 15px; /* More padding inside each link */
-                font-size: 18px; /* Slightly bigger text */
-                text-decoration: none;
-                color: #333;
-                border-bottom: 1px solid #ddd;
-            }
-            .dropdown-menu a:last-child {
-                border-bottom: none;
-            }
-            .dropdown-menu a:hover {
-                background: #f4f4f4;
-            }
-
-        </style>
-        <script>
-            function toggleMenu() {
-                var menu = document.getElementById("dropdown-menu");
-                if (menu.style.display === "block") {
-                    menu.style.display = "none";
-                } else {
-                    menu.style.display = "block";
-                }
-            }
-        </script>
-    </head>
-    <body>
-        <button class="menu-button" onclick="toggleMenu()">⋮</button>
-        <div id="dropdown-menu" class="dropdown-menu">
-           <nav>
-               <ul>
-                   <li><a href="index.html">Home</a></li>
-                   <li><a href="about.html">About</a></li>
-                   <li><a href="projects.html">Projects</a></li>
-                   <li><a href="skills.html">Skills</a></li>
-                   <li><a href="travel.html">Travel</a></li>
-                   <li><a href="contact.html">Contact</a></li>
-                   <div class="theme-switch">
+        <nav id="dropdown-menu" class="dropdown-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="travel.html">Travel</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <div class="theme-switch">
                     <input type="checkbox" id="theme-toggle">
                     <label for="theme-toggle" class="switch"></label>
                 </div>
-               </ul>
-           </nav>
-        </div>
-    </body>
+            </ul>
+        </nav>
     </header>
 
+<<<<<<< HEAD
 <!--Context of Skills Page-->
 <style>
         body {
@@ -146,11 +71,32 @@
         <p><a href="https://www.instagram.com/whyonlybunny/">🅾 Instagram</a></p>
         <a href="index.html" class="btn">Back to Home</a>
     </div>
+=======
+    <main>
+        <div class="container contact">
+            <h1>Let's Connect!</h1>
+            <section>
+                <h2>Get in Touch</h2>
+                <form id="contact-form">
+                    <p><input type="text" id="name" placeholder="Your Name" required></p>
+                    <p><input type="email" id="email" placeholder="Your Email" required></p>
+                    <p><textarea id="message" placeholder="Your Message" required></textarea></p>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+                <p id="form-status"></p>
+            </section>
+            <a href="index.html" class="btn">Back to Home</a>
+        </div>
+        <div class="social-links">
+            <a href="mailto:whyonlythakur@hotmail.com">📧 Mail</a>
+            <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">🔗 LinkedIn</a>
+            <a href="https://www.instagram.com/whyonlybunny/">🅾 Instagram</a>
+        </div>
+    </main>
+>>>>>>> 6bb7a84 (Initial commit or Update portfolio)
     
+    <footer>
+        <div class="footer-text">© 2025 Arpit Thakur | All Rights Reserved.</div>
+    </footer>
 </body>
-
-<footer>
-    <div style="text-align:center;padding:10px;margin-top:7px;"> © 2025 Arpit Thakur | All Rights Reserved.</div>
-    <p></p>
-</footer>
 </html>

@@ -1,108 +1,12 @@
-<!--Menu Bar At Top Right Corner-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | The Skill Seeker</title>
+    <title>Travel | The Skill Seeker</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
-</head>
- <body>
-    <header>
-        <h1><a href="index.html">The Skill Seeker</a></h1>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 0;
-                background-color: #f4f4f4;
-                text-align: center;
-                position: relative;
-            }
-            .container {
-                max-width: 800px;
-                margin: 50px auto;
-                padding: 20px;
-                background: white;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                border-radius: 10px;
-            }
-            h1 {
-                color: #333;
-            }
-            .menu-button {
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                background: #007BFF;
-                color: white;
-                border: none;
-                padding: 10px;
-                border-radius: 50%;
-                font-size: 18px;
-                cursor: pointer;
-            }
-            .dropdown-menu {
-                display: none;
-                position: absolute;
-                top: 60px; /* Increased distance from the button */
-                right: 10px; /* Adjusted position */
-                background: white;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                border-radius: 8px; /* More rounded edges */
-                padding: 15px 20px; /* More padding for spacing */
-                width: 250px; /* Increased width */
-            }            
-            .dropdown-menu a {
-                display: block;
-                padding: 12px 15px; /* More padding inside each link */
-                font-size: 18px; /* Slightly bigger text */
-                text-decoration: none;
-                color: #333;
-                border-bottom: 1px solid #ddd;
-            }
-            .dropdown-menu a:last-child {
-                border-bottom: none;
-            }
-            .dropdown-menu a:hover {
-                background: #f4f4f4;
-            }
-        </style>
-        <script>
-            function toggleMenu() {
-                var menu = document.getElementById("dropdown-menu");
-                if (menu.style.display === "block") {
-                    menu.style.display = "none";
-                } else {
-                    menu.style.display = "block";
-                }
-            }
-        </script>
-    </head>
-    <body>
-        <button class="menu-button" onclick="toggleMenu()">⋮</button>
-        <div id="dropdown-menu" class="dropdown-menu">
-           <nav>
-               <ul>
-                   <li><a href="index.html">Home</a></li>
-                   <li><a href="about.html">About</a></li>
-                   <li><a href="projects.html">Projects</a></li>
-                   <li><a href="skills.html">Skills</a></li>
-                   <li><a href="travel.html">Travel</a></li>
-                   <li><a href="contact.html">Contact</a></li>
-                   <div class="theme-switch">
-                    <input type="checkbox" id="theme-toggle">
-                    <label for="theme-toggle" class="switch"></label>
-                </div>
-               </ul>
-           </nav>
-        </div>
-    </body>
-    </header>
-
-<!--Context of Skills Page-->
-<style>
+    <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -111,21 +15,47 @@
             text-align: center;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 50px auto;
             padding: 20px;
             background: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
         }
-        h1 {
+        h1, h2 {
             color: #333;
         }
-        .btn {
-            display: block;
-            width: 80%;
-            margin: 10px auto;
+        .travel-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .travel-card {
+            width: 250px;
             padding: 15px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            text-align: center;
+        }
+        .travel-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        .travel-card a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+            display: block;
+            padding: 10px 0;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
             background: #007BFF;
             color: white;
             text-decoration: none;
@@ -136,21 +66,144 @@
         .btn:hover {
             background: #0056b3;
         }
+        #searchBox {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .filter-buttons {
+            margin: 15px 0;
+        }
+        .filter-buttons button {
+            padding: 8px 15px;
+            margin: 5px;
+            border: none;
+            background: #007BFF;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .filter-buttons button:hover {
+            background: #0056b3;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>My Travel Experiences</h1>
-        <h2>Explore the Places I've Visited</h2>
-        
-        <a href="travel/up/ayodhya/ayodhya.html" class="btn"> 🇮🇳 Ayodhya (U.P) </a>
-        <a href="travel/up/sangam/sangam.html" class="btn"> 🇮🇳 Sangam,Pryagraj (U.P) </a>
-        
-        <a href="index.html" class="btn" style="background: #555;">Back to Home</a>
+
+<header>
+    <h1><a href="index.html">The Skill Seeker</a></h1>
+    <nav id="dropdown-menu" class="dropdown-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="travel.html">Travel</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <div class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <label for="theme-toggle" class="switch"></label>
+            </div>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>Why ONLY BUNNY ?</h1>
+    <h2>Explore the Places I've Visited</h2>
+
+    <!-- Search Box -->
+    <input type="text" id="searchBox" placeholder="Search destinations...">
+
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+        <button onclick="filterCategory('all')">All</button>
+        <button onclick="filterCategory('Uttar Pradesh')">Uttar Pradesh</button>
+        <button onclick="filterCategory('Madhya Pradesh')">Madhya Pradesh</button>
     </div>
-</body>
+
+    <!-- Travel Destinations -->
+    <div class="travel-grid">
+        <div class="travel-card" data-category="Uttar Pradesh">
+            <h3>Ayodhya (U.P)</h3>
+            <a href="travel/up/ayodhya/ayodhya.html">Explore</a>
+        </div>
+
+        <div class="travel-card" data-category="Uttar Pradesh">
+            <h3>Sangam, Prayagraj (U.P)</h3>
+            <a href="travel/up/sangam/sangam.html">Explore</a>
+        </div>
+        <div class="travel-card" data-category="Madhya Pradesh">
+            <h3>Chattarpur, (M.P)</h3>
+            <a href="">Explore</a>
+        </div>
+    </div>
+
+    <a href="index.html" class="btn">Back to Home</a>
+</div>
 
 <footer>
-    <div style="text-align:center;padding:10px;margin-top:7px;"> © 2025 Arpit Thakur | All Rights Reserved.</div>
+    <div style="text-align:center;padding:10px;margin-top:7px;"> 
+        © 2025 Arpit Thakur | All Rights Reserved.
+    </div>
 </footer>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Search Functionality
+    function filterTravelPlaces() {
+        let searchInput = document.getElementById("searchBox").value.toLowerCase();
+        let travelCards = document.querySelectorAll(".travel-card");
+
+        travelCards.forEach(card => {
+            let travelTitle = card.querySelector("h3").innerText.toLowerCase();
+
+            if (travelTitle.includes(searchInput)) {
+                card.style.display = "block"; // Show card
+            } else {
+                card.style.display = "none"; // Hide card
+            }
+        });
+    }
+
+    document.getElementById("searchBox").addEventListener("keyup", filterTravelPlaces);
+
+    // Filter by Category
+    function filterCategory(category) {
+        let travelCards = document.querySelectorAll(".travel-card");
+
+        travelCards.forEach(card => {
+            let cardCategory = card.getAttribute("data-category");
+
+            // Show all cards if "all" is selected
+            if (category.toLowerCase() === "all" || cardCategory === category) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    }
+
+    // Ensure buttons trigger filtering correctly
+    let filterButtons = document.querySelectorAll(".filter-buttons button");
+
+    filterButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            let category = this.innerText.trim(); // Trim extra spaces
+            if (category.toLowerCase() === "all") {
+                filterCategory("all"); // Explicitly handle "All"
+            } else {
+                filterCategory(category);
+            }
+        });
+    });
+});
+
+</script>
+
+</body>
 </html>

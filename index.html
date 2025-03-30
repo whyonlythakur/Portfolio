@@ -1,175 +1,175 @@
-<!-- Menu Bar At Top Right Corner -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | The Skill Seeker</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
+<body>
+    <style>
+    .testimonials {
+        text-align: center;
+        padding: 50px 20px;
+        background: #f4f4f4;
+    }
+    
+    .testimonial-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        max-width: 600px;
+        margin: auto;
+    }
+    
+    .testimonial-card {
+        display: none; /* Hide all initially */
+        background: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        width: 80%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    
+    .testimonial-card p {
+        font-size: 18px;
+        font-style: italic;
+        color: #333;
+    }
+    
+    .testimonial-card h4 {
+        margin-top: 10px;
+        font-weight: bold;
+        color: #007BFF;
+    }
+    
+/* Dark Mode in Testimonials */
 
- <body>
+    .dark-mode .testimonials {
+        background: #1e1e1e !important;
+    }
+    
+    .dark-mode .testimonial-card {
+        background: #2c2c2c !important;
+        color: #ffffff !important;
+        border: 1px solid #444 !important;
+    }
+    
+    .dark-mode .testimonial-card p {
+        color: #cccccc !important;
+    }
+    
+    .dark-mode .testimonial-card h4 {
+        color: #ffcc00 !important;
+    }
+
+
+    .prev-btn, .next-btn {
+        background: #007BFF;
+        color: white;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+    
+    .prev-btn:hover, .next-btn:hover {
+        background: #0056b3;
+    }
+    </style>
     <header>
         <h1><a href="index.html">The Skill Seeker</a></h1>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 0;
-                background-color: #f4f4f4;
-                text-align: center;
-                position: relative;
-            }
-            .container {
-                max-width: 800px;
-                margin: 50px auto;
-                padding: 20px;
-                background: white;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                border-radius: 10px;
-            }
-            h1 {
-                color: #333;
-            }
-            .menu-button {
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                background: #007BFF;
-                color: white;
-                border: none;
-                padding: 10px;
-                border-radius: 50%;
-                font-size: 18px;
-                cursor: pointer;
-            }
-            .dropdown-menu {
-                display: none;
-                position: absolute;
-                top: 60px; /* Increased distance from the button */
-                right: 10px; /* Adjusted position */
-                background: white;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                border-radius: 8px; /* More rounded edges */
-                padding: 15px 20px; /* More padding for spacing */
-                width: 250px; /* Increased width */
-            }
-            .dropdown-menu a {
-                display: block;
-                padding: 12px 15px; /* More padding inside each link */
-                font-size: 18px; /* Slightly bigger text */
-                text-decoration: none;
-                color: #333;
-                border-bottom: 1px solid #ddd;
-            }
-            .dropdown-menu a:last-child {
-                border-bottom: none;
-            }
-            .dropdown-menu a:hover {
-                background: #f4f4f4;
-            }
-        </style>
-        <script>
-            function toggleMenu() {
-                var menu = document.getElementById("dropdown-menu");
-                if (menu.style.display === "block") {
-                    menu.style.display = "none";
-                } else {
-                    menu.style.display = "block";
-                }
-            }
-        </script>
-    </head>
-    <body>
-        <button class="menu-button" onclick="toggleMenu()">⋮</button>
-        <div id="dropdown-menu" class="dropdown-menu">
-           <nav>
-               <ul>
-                   <li><a href="index.html">Home</a></li>
-                   <li><a href="about.html">About</a></li>
-                   <li><a href="projects.html">Projects</a></li>
-                   <li><a href="skills.html">Skills</a></li>
-                   <li><a href="travel.html">Travel</a></li>
-                   <li><a href="contact.html">Contact</a></li>
-                   <div class="theme-switch">
+        <nav id="dropdown-menu" class="dropdown-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="travel.html">Travel</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <div class="theme-switch">
                     <input type="checkbox" id="theme-toggle">
                     <label for="theme-toggle" class="switch"></label>
                 </div>
-               </ul>
-           </nav>
-        </div>
-        
-    </body>
+            </ul>
+        </nav>
     </header>
+    
+    <!-- Landing Section -->
+    <section class="landing">
+        <div class="container">
+            <h2>Welcome to SkillSeeker.Mee </h2>
+            <h3>Mastering Skills, One Challenge at a Time</h3>
+            <p>🌍 <strong>Curious Mind. Problem Solver. Skill Explorer.</strong></p>
+            <p>I believe that <strong>learning has no limits.</strong> Whether it's <strong>technology, leadership, creative problem-solving, or exploration</strong>, every experience adds value to who I am.</p>
+            <a href="about.html" class="btn">Discover My Journey</a>
+            <a href="projects.html" class="btn">Explore My Work</a>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What People Say About Me</h2>
+        <div class="testimonial-container">
+            <button class="prev-btn" onclick="prevTestimonial()">❮</button>
+            <div class="testimonial-card active">
+                <p>"Arpit is an exceptional developer! His attention to detail is amazing."</p>
+                <h4>- John Doe, Web Developer</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"Working with Arpit was a great experience. His coding skills are top-notch!"</p>
+                <h4>- Jane Smith, UI/UX Designer</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"Arpit's ability to solve complex problems is outstanding. Highly recommend!"</p>
+                <h4>- Mike Johnson, Project Manager</h4>
+            </div>
+            <button class="next-btn" onclick="nextTestimonial()">❯</button>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-text">© 2025 Arpit Thakur | All Rights Reserved.</div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    let currentIndex = 0;
+    const testimonials = document.querySelectorAll(".testimonial-card");
+    const totalTestimonials = testimonials.length;
 
-<!--Context of Landing Page-->
-<style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-        body.home {
-    background: url('images/Portfolio/home-image.png') no-repeat center center fixed;
-    background-size: cover;
-}
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            font-size: 18px;
-            color: #666;
-            line-height: 1.6;
-        }
-        .highlight {
-            font-weight: bold;
-            color: #007BFF;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: #007BFF;
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-        .btn:hover {
-            background: #0056b3;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Welcome to SkillSeeker.me</h1>
-        <h2>Mastering Skills, One Challenge at a Time</h2>
-        <p>🌍 <strong>Curious Mind. Problem Solver. Skill Explorer.</strong></p>
-        <p>I believe that <strong>learning has no limits.</strong> Whether it's <strong> technology, leadership, creative problem-solving, or exploration</strong>, every experience adds value to who I am.</p>
-        <p>📌 <strong>My expertise spans across multiple domains:</strong></p>
-        <p>💻 <strong>Technology</strong> – Software development, IT problem-solving.</p>
-        <p>🌍 <strong>Travel & Exploration</strong> – Learning from experiences beyond textbooks.</p>
-        <p>🏢 <strong>Administrative & Leadership</strong> – Managing teams, making strategic decisions.</p>
-        <p><strong>Every project, every journey, every challenge—I embrace them to grow and evolve.</strong></p>
-        <a href="about.html" class="btn">Discover My Journey</a>
-        <a href="projects.html" class="btn">Explore My Work</a>
-    </div>
+    function showTestimonial(index) {
+        testimonials.forEach((testimonial, i) => {
+            testimonial.style.display = i === index ? "block" : "none";
+        });
+    }
+
+    function prevTestimonial() {
+        currentIndex = (currentIndex - 1 + totalTestimonials) % totalTestimonials;
+        showTestimonial(currentIndex);
+    }
+
+    function nextTestimonial() {
+        currentIndex = (currentIndex + 1) % totalTestimonials;
+        showTestimonial(currentIndex);
+    }
+
+    // Show the first testimonial initially
+    showTestimonial(currentIndex);
+
+    // Attach event listeners to buttons
+    document.querySelector(".prev-btn").addEventListener("click", prevTestimonial);
+    document.querySelector(".next-btn").addEventListener("click", nextTestimonial);
+});
+
+    </script>
 </body>
-
-<footer>
-    <div style="text-align:center;padding:10px;margin-top:7px;"> © 2025 Arpit Thakur | All Rights Reserved.</div>
-    <p></p>
-</footer>
 </html>

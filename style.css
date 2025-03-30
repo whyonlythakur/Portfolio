@@ -1,12 +1,68 @@
-/* Change link color on hover */
-a {
-    color: #007bff;  /* Blue color */
-    text-decoration: none; /* Removes underline */
+/* ========================================
+   Global Styles
+   ======================================== */
+
+   body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    color: #333;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
-a:hover {
-    color: #0ffeff; /* Orange when hovered */
+body.loaded {
+    opacity: 1;
 }
+
+/* ========================================
+   Links
+   ======================================== */
+/* Remove underline from all links */
+a {
+    text-decoration: none !important;
+}
+
+/* Prevent links from changing color after clicking */
+a:visited {
+    color: inherit !important;
+}
+
+/* Ensure hover effects still work */
+a:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+/* ========================================
+   Typography
+   ======================================== */
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #007BFF;
+    text-transform: uppercase;
+    text-shadow: 2px 4px 6px rgba(255, 255, 255, 0.2);
+    letter-spacing: 2px;
+}
+
+h2, h3 {
+    color: #222;
+    font-weight: 600;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* ========================================
+   Navigation
+   ======================================== */
 
 header {
     background: #333;
@@ -31,134 +87,108 @@ nav ul li a {
     font-weight: bold;
 }
 
-button {
-    padding: 5px 10px;
-    cursor: pointer;
+/* ========================================
+   Buttons
+   ======================================== */
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #007BFF;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.2s, background 0.3s;
+    position: relative;
+    overflow: hidden;
 }
 
+.btn:hover {
+    transform: scale(1.05);
+    background: #0056b3;
+}
 
-/* Dark Mode Switch Container */
+.btn::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.6s;
+}
+
+.btn:active::after {
+    transform: scale(3);
+    opacity: 1;
+}
+
+/* ========================================
+   Theme Toggle (Dark Mode)
+   ======================================== */
+
 .theme-switch {
     position: relative;
     width: 60px;
     height: 30px;
 }
 
-/* Hide Default Checkbox */
 .theme-switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-/* Switch Background */
 .switch {
     position: absolute;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
     background-color: #ccc;
-    border-radius: 30px; /* Cylindrical Shape */
+    border-radius: 30px;
     transition: 0.4s;
 }
 
-/* The Circular Knob */
 .switch::before {
-    content: "☀️"; /* Sun Emoji (Light Mode) */
+    content: "☀️";
     position: absolute;
-    height: 24px;
     width: 24px;
+    height: 24px;
     left: 4px;
     bottom: 3px;
     background-color: white;
     border-radius: 50%;
-    transition: 0.4s;
-    font-size: 16px;
     text-align: center;
-    line-height: 24px;
+    font-size: 16px;
+    transition: 0.4s;
 }
 
-/* When Dark Mode is Activated */
 .theme-switch input:checked + .switch {
-    background-color: #007BFF; /* Blue (Active) */
+    background-color: #007BFF;
 }
 
-/* Move the Knob (Dark Mode) */
 .theme-switch input:checked + .switch::before {
     transform: translateX(30px);
-    content: "🌙"; /* Moon Emoji (Dark Mode) */
+    content: "🌙";
 }
 
+/* ========================================
+   Background Images for Pages
+   ======================================== */
 
+body.home { background: url('../Portfolio/media/home.png') no-repeat center center fixed; background-size: cover; }
+body.about { background: url('../Portfolio/media/about.png') no-repeat center center fixed; background-size: cover; }
+body.projects { background: url('../Portfolio/media/projects.png') no-repeat center center fixed; background-size: cover; }
+body.skills { background: url('../Portfolio/media/skills.png') no-repeat center center fixed; background-size: cover; }
+body.travel { background: url('../Portfolio/media/travel.png') no-repeat center center fixed; background-size: cover; }
+body.contact { background: url('../Portfolio/media/contact.png') no-repeat center center fixed; background-size: cover; }
 
-
-/* ============================ */
-/* Background Images */
-/* ============================ */
-
-/* Home Page */
-
-body.home {
-    background: url('../Portfolio/media/home.png') no-repeat center center fixed;
-    background-size: cover;
-}
-
-/* About Page */
-body.about {
-    background: url('../Portfolio/media/about.png') no-repeat center center fixed;
-    background-size: cover;
-}
-
-/* Projects Page */
-body.projects {
-    background: url('../Portfolio/media/projects.png') no-repeat center center fixed;
-    background-size: cover;
-}
-
-/* Skills Page */
-body.skills {
-    background: url('../Portfolio/media/skills.png') no-repeat center center fixed;
-    background-size: cover;
-}
-
-/* Travel Page */
-body.travel {
-    background: url('../Portfolio/media/travel.png') no-repeat center center fixed;
-    background-size: cover;
-}
-
-/* Contact Page */
-body.contact {
-    background: url('../Portfolio/media/contact.png') no-repeat center center fixed;
-    background-size: cover;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ============================ */
-/* Light Mode - Default Styles */
-/* ============================ */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    text-align: center;
-    color: #333; /* Default text color */
-}
+/* ========================================
+   Sections
+   ======================================== */
 
 .container {
     max-width: 800px;
@@ -169,56 +199,6 @@ body {
     border-radius: 10px;
 }
 
-h1 {
-    font-size: 48px; /* Increase font size */
-    font-weight: bold; /* Make it bold */
-    color: #007BFF; /* Attractive blue color */
-    text-transform: uppercase; /* Uppercase letters */
-    text-shadow: 2px 4px 6px rgba(255, 255, 255, 0.2); /* Add a slight shadow */
-    letter-spacing: 2px; /* Spacing between letters */
-    font-family: 'Poppins', sans-serif; /* Stylish font */
-}
-
-/* Fix Headings */
-h2, h3 {
-    color: #333;
-}
-
-/* Fix Paragraph Text */
-p {
-    font-size: 18px;
-    color: #666;
-    line-height: 1.6;
-}
-
-/* Fix Project Section */
-.project {
-    margin: 20px 0;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background: #fafafa;
-}
-
-/* Light Mode - Buttons */
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #007BFF; /* Blue */
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-/* Button Hover */
-.btn:hover {
-    background: #0056b3;
-}
-
-/* Light Mode Footer */
 footer {
     background: #333;
     color: white;
@@ -226,69 +206,40 @@ footer {
     padding: 15px;
 }
 
-/* ============================ */
-        /* DARK MODE 
-/* ============================ */
+/* ========================================
+   Dark Mode Styles
+   ======================================== */
+
 .dark-mode {
-    background-color: #121212 !important;  /* Dark Background */
-    color: #ffffff !important;  /* Light Text */
+    background-color: #121212 !important;
+    color: #ffffff !important;
 }
 
-/* Dark Mode - Change Container to Grey */
 .dark-mode .container {
-    background: #2c2c2c !important; /* Dark Grey */
+    background: #2c2c2c !important;
     color: #ffffff !important;
     border: 1px solid #444 !important;
 }
 
-/* Dark Mode - Headings */
-.dark-mode h1 {
-    color: #ffcc00 !important; /* Bright yellow in dark mode */
-    text-shadow: 2px 4px 6px rgba(255, 204, 0, 0.5); /* More glow effect */
-}
-.dark-mode h2, 
-.dark-mode h3 {
-    color: #ffcc00 !important;  /* Yellow Headings */
-}
+.dark-mode h1 { color: #ffcc00 !important; }
+.dark-mode h2, .dark-mode h3 { color: #ffcc00 !important; }
+.dark-mode p { color: #cccccc !important; }
+.dark-mode footer { background: #2c2c2c !important; color: #ffcc00 !important; }
 
-/* Dark Mode - Paragraphs */
-.dark-mode p {
-    color: #cccccc !important;  /* Light Gray */
-}
+/* ========================================
+   Parallax Effect
+   ======================================== */
 
-/* Dark Mode - Project Section */
-.dark-mode .project {
-    background: #2c2c2c !important; /* Dark Grey */
-    border-color: #444 !important;
-    color: white !important;
-}
-
-/* Dark Mode - Buttons */
-.dark-mode .btn {
-    background: #ffcc00 !important; /* Yellow Button */
-    color: black !important;
-    border: 1px solid #ffcc00;
-}
-
-/* Button Hover Effect */
-.dark-mode .btn:hover {
-    background: #ffaa00 !important;
-    color: black !important;
-}
-
-/* Dark Mode - Footer (Grey) */
-.dark-mode footer {
-    background: #2c2c2c !important; /* Dark Grey */
-    color: #ffcc00 !important; /* Yellow */
-    border-top: 2px solid #ffcc00;
-}
-
-/* Dark Mode - Footer Links */
-.dark-mode footer a {
-    color: #ffcc00 !important;
-    text-decoration: none;
-}
-
-.dark-mode footer a:hover {
-    color: #ffaa00 !important;
+.parallax {
+    background: url('media/parallax-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    position: relative;
+    background-attachment: fixed;
 }

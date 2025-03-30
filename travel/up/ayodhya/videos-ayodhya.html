@@ -99,11 +99,27 @@
     </style>
 </head>
 <body>
-
+    <header>
+        <h1><a href="index.html">The Skill Seeker</a></h1>
+        <nav id="dropdown-menu" class="dropdown-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/skills.html">Skills</a></li>
+                <li><a href="/travel.html">Travel</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <div class="theme-switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <label for="theme-toggle" class="switch"></label>
+                </div>
+            </ul>
+        </nav>
+    </header>
     <h1>Travel Videos</h1>
     <p>Watch the moments I've captured during my travels.</p>
 
-    <div class="video-gallery">
+  <div class="video-gallery">
         <video src="../ayodhya/ayodhya-media/saryu.mp4" controls onclick="openLightbox(this.src)"></video>
         <video src="../ayodhya/ayodhya-media/saryu2.mp4" controls onclick="openLightbox(this.src)"></video>
         <video src="../ayodhya/ayodhya-media/hanumangarhi.mp4" controls onclick="openLightbox(this.src)"></video>
@@ -112,6 +128,7 @@
         <video src="../ayodhya/ayodhya-media/rammandirvideo1.mp4" controls onclick="openLightbox(this.src)"></video>
         <video src="../ayodhya/ayodhya-media/rammandirvideo2.mp4" controls onclick="openLightbox(this.src)"></video>
         <video src="../ayodhya/ayodhya-media/monkeyfeed.mp4" controls onclick="openLightbox(this.src)"></video>
+<<<<<<< HEAD
 
 
     </div>
@@ -119,11 +136,15 @@
     </div>
     </div>
     <a href="../ayodhya/ayodhya.html" class="btn" style="background: #555;">Go back </a>
+=======
+       <a href="../ayodhya/ayodhya.html" class="btn" style="background: #555;">Go back </a>
+>>>>>>> 6bb7a84 (Initial commit or Update portfolio)
     <!-- Lightbox Modal -->
     <div class="lightbox" id="lightbox">
         <span class="close" onclick="closeLightbox()">&times;</span>
         <video id="lightboxVideo" controls autoplay></video>
     </div>
+   </div>
 
     <script>
         function openLightbox(src) {
